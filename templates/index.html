@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2 class="text-center">Введите данные</h2>
+    <form action="{{ url_for('index') }}" method="POST" class="mt-5" >
+        <div class="form-group mb-3">
+            <label for='nameId' class="form-label">Имя</label>
+            <input name='name' id="nameId" type="text" class="form-control" value="{{ request.form.get('name', '') }}">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Фамилия</label>
+            <input name='surname' type="text" class="form-control" value="{{ request.form.get('surname', '') }}">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Текст</label>
+            <textarea name='replica' type="text" class="form-control" value="{{ request.form.get('replica','') }}"></textarea>
+        </div>
+        <input type="submit" value="Отправить" class="btn btn-primary">
+    </form>
+    <table class="table table-bordered mt-5">
+        <thead>
+            <tr><td>Номер</td><td>Статус</td></tr>
+        </thead>
+        <tbody>
+        {% for block in blocks %}
+            <tr>
+                <td>{{block['block']}}</td>
+                <td>{{block['status']}}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
