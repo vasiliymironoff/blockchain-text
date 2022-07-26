@@ -3,7 +3,7 @@
 ![](https://img.shields.io/badge/python-3.8-blue)
 ![](https://img.shields.io/badge/flask-2.1-inactive)
 
-Простая blockchain система на python с использованием flask, сделанная на основе https://www.youtube.com/playlist?list=PLlWXhlUMyooZWYV5ilzjRvRfmkYsDQuom
+Простая blockchain система на python с использованием flask
 
 ## Интерфейс на Flask с Bootstrap 5
  
